@@ -1,0 +1,46 @@
+﻿<Page x:Class="GasStationApp.Station"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GasStationApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Station">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="317*"/>
+            <RowDefinition Height="133*"/>
+        </Grid.RowDefinitions>
+        <Image Stretch="Fill" Source="imgs/1.jpg" HorizontalAlignment="Center" Height="317" VerticalAlignment="Center" Width="800"/>
+        <Label Content="Количество литров" HorizontalAlignment="Left" Margin="174,37,0,0" VerticalAlignment="Top" Width="144" HorizontalContentAlignment="Center"/>
+        <TextBox Name="textBox_FuelCount" HorizontalAlignment="Left" Margin="174,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="23" TextChanged="textBox_FuelCount_TextChanged"/>
+        <ComboBox Name="FueldList" HorizontalAlignment="Left" Margin="174,10,0,0" VerticalAlignment="Top" Width="144" SelectionChanged="FueldList_SelectionChanged">
+            <!--<TextBlock Name="textBlock1">АИ92</TextBlock>
+            <TextBlock Name="textBlock2">АИ95</TextBlock>
+            <TextBlock Name="textBlock3">АИ98</TextBlock>
+            <TextBlock Name="textBlock4">ДТ</TextBlock>-->
+            <Label Name="textBlock1" Content="АИ92"/>
+            <Label Name="textBlock2" Content="АИ95"/>
+            <Label Name="textBlock3" Content="АИ98"/>
+            <Label Name="textBlock4" Content="ДТ"/>
+        </ComboBox>
+        <Button Content="Расчитать общую стоимость" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="134" Width="800" Click="calculatePrice_button"/>
+        <Label Content="Магазин" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="486,10,0,0" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.469,2.373"/>
+        <ComboBox Name="comboBox_ShopItems" Margin="486,36,170,0" VerticalAlignment="Top">
+            <Label Content="Snickers"/>
+            <Label Content="Pepsi"/>
+            <Label Content="RedBull"/>
+            <Label Content="Lays"/>
+        </ComboBox>
+        <Button Name="addItem_Button" Content="Положить в корзину" HorizontalAlignment="Left" Margin="486,65,0,0" VerticalAlignment="Top" Width="130" Click="addItem_Click"/>
+
+
+
+
+
+
+
+    </Grid>
+</Page>
